@@ -11,23 +11,30 @@ export class AppComponent {
   numbers = "";
   closed = false;
   savedpin = "";
-  counter: number = 0;
+  time = null;
 
+  public clearcall(): void{
 
-
-  public countTime(arg: number, arg2: any): void{
-
-    alert("Timeout " + arg);
-    if(arg < 4) {
-      arg += 1;
-    }else{
-      arg = "";
-      clearInterval(arg2);
-    }
-
-
+    this.numbers = "";
+    this.time = null;
 
   }
+
+  public resetTime(): void{
+
+    if( this.time == null){
+
+      this.time = setTimeout(() => {
+        this.clearcall()
+      }, 3000)
+
+    }else{
+      clearTimeout(this.time);
+      this.time = null;
+    }
+
+  }
+
 
   public passNum(arg: any): void{
 
@@ -52,6 +59,7 @@ export class AppComponent {
   public triggerlock(): void{
 
     this.resetTime();
+
     if (2 < (this.numbers.length)){
 
       if(!this.closed) {
@@ -68,6 +76,8 @@ export class AppComponent {
     }else{
       this.numbers = "DONT CHEAT. ENTER CORRECT PIN FIRST.";
     }
+
+
 
   }
 
