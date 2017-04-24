@@ -1,0 +1,62 @@
+.texta {
+  width: 70vw;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: darkgray;
+}
+
+textarea {
+  text-align: right;
+}
+
+table,
+tr{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pad {
+  width: 70vw;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: darkgray;
+}
+
+
+button {
+  /*
+             ***************************
+             ***************************
+             * This Code is from W3Schools!                                              *
+             * https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_color     *
+             ***************************
+             ***************************
+         */
+  background-color: darkgray;
+  border: none;
+  padding: 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  width: 7vw;
+}
+
+button:hover {
+  /*
+             ***************************
+             ***************************
+             * This Code is from W3Schools!                                              *
+             * https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_color     *
+             ***************************
+             ***************************
+         */
+  background-color: dimgray;
+  border: none;
+  width: 7vw;
+  padding: 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}

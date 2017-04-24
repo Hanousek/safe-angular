@@ -1,3 +1,39 @@
 <h1>
   {{title}}
 </h1>
+
+<div class="pad">
+
+  <div class="texta">
+  <textarea rows="3" cols="100"> {{numbers}} </textarea>
+  </div>
+
+  <table>
+
+  <tr>
+  <button (click)="passNum(1)">1</button>
+  <button (click)="passNum(2)">2</button>
+  <button (click)="passNum(3)">3</button>
+  </tr>
+
+  <tr>
+  <button (click)="passNum(4)">4</button>
+  <button (click)="passNum(5)">5</button>
+  <button (click)="passNum(6)">6</button>
+  </tr>
+
+  <tr>
+  <button  (click)="passNum(7)">7</button>
+  <button (click)="passNum(8)">8</button>
+  <button  (click)="passNum(9)">9</button>
+  </tr>
+
+  <tr>
+  <button (click)="triggerlock()">#</button>
+  <button (click)="passNum(0)">0</button>
+  <button (click)="triggerclear()">*</button>
+  </tr>
+
+  </table>
+
+</div>
