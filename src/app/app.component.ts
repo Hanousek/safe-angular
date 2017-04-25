@@ -16,21 +16,40 @@ export class AppComponent {
   public clearcall(): void{
 
     this.numbers = "";
+
+  }
+
+  public cleartimer(): void{
+
+    clearTimeout(this.time);
     this.time = null;
+
+  }
+
+  public isTimerRunning(): boolean{
+
+    return typeof this.time != null;
+
+  }
+
+  public makeTimer(): void{
+
+    this.time = setTimeout(() => {
+      this.clearcall();
+    }, 3000)
 
   }
 
   public resetTime(): void{
 
-    if( this.time == null){
+    if(!this.isTimerRunning()){
 
-      this.time = setTimeout(() => {
-        this.clearcall()
-      }, 3000)
+      this.makeTimer();
 
     }else{
-      clearTimeout(this.time);
-      this.time = null;
+      this.cleartimer();
+      this.makeTimer();
+
     }
 
   }
@@ -78,13 +97,6 @@ export class AppComponent {
     }
 
 
-
-  }
-
-  public triggerclear(): void{
-
-  this.resetTime();
-  this.numbers = "";
 
   }
 
